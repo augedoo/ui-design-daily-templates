@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#statistics {
+  font-family: 'Montserrat', sans-serif;
+  background: #322a62;
+  color: #fff;
+}
+
+#statistics .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  position: relative;
+}
+
+#statistics .container:before {
+  content: '';
+  height: 500px;
+  width: 85%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  margin: auto;
+  background: #372e6d;
+}
+
+#statistics .card {
+  height: 450px;
+  width: 85%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  padding: 0 2rem;
+  background: #584484;
+  z-index: 2;
+  background: linear-gradient(27deg, #57417f 50%, #6257a4 100%);
+}
+
+#statistics .card .l-content {
+  height: 100%;
+  padding-left: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#statistics .card .l-content .card-title {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: 1.58px;
+}
+
+#statistics .card .l-content .card-description {
+  margin-bottom: 2.5rem;
+  font-size: 0.8rem;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #eee;
+  letter-spacing: 1.2px;
+}
+
+#statistics .card .l-content a {
+  text-decoration: none;
+  color: #d2cae4;
+  padding: 0.75rem 1.5rem;
+  background: #634d95;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+#statistics .card .r-content {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#statistics .card .r-content ul {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  list-style: none;
+}
+
+#statistics .card .r-content ul li {
+  padding: 0 2rem;
+}
+
+#statistics .card .r-content ul li:first-child {
+  border-right: 1px solid #6a529f;
+  border-bottom: 1px solid #6a529f;
+  padding-bottom: 2rem;
+}
+
+#statistics .card .r-content ul li:nth-child(2) {
+  border-bottom: 1px solid #6a529f;
+  padding-bottom: 2rem;
+}
+
+#statistics .card .r-content ul li:nth-child(3) {
+  border-right: 1px solid #6a529f;
+  padding-top: 2rem;
+}
+
+#statistics .card .r-content ul li:nth-child(4) {
+  padding-top: 2rem;
+}
+
+#statistics .card .r-content ul li span {
+  display: block;
+}
+
+#statistics .card .r-content ul li span.stats-number {
+  font-size: 2.5rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: 0.35rem;
+}
+
+#statistics .card .r-content ul li span.stats-name {
+  text-transform: uppercase;
+  font-size: 0.5rem;
+  color: #c4b9db;
+}
+
+@media screen and (max-width: 850px) {
+  #statistics .container:before {
+    content: '';
+    height: 650px;
+  }
+  #statistics .card {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    min-height: 550px;
+    height: auto;
+    padding: 2rem;
+  }
+  #statistics .card .l-content {
+    padding-bottom: 1rem;
+    padding-left: 4rem;
+    border-bottom: 1px solid #634d95;
+  }
+  #statistics .card .r-content {
+    margin-top: 2.5rem;
+    padding-left: 4rem;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+/*# sourceMappingURL=main.css.map */
