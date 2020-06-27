@@ -1,0 +1,271 @@
+@import url("https://fonts.googleapis.com/css2?family=Muli:wght@400;500;600;700&display=swap");
+/* Resets */
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  font-family: 'Muli', sans-serif;
+  color: #2e2e2e;
+  background: #fff;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Muli', sans-serif;
+  color: #2e2e2e;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.3rem;
+}
+
+a {
+  font-family: 'Muli', sans-serif;
+  color: #2e2e2e;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+/* Utilities */
+.bg-dark {
+  background: #2e2e2e;
+  color: #ffffff;
+}
+
+.page-wrapper {
+  width: 100%;
+  background: #f4f4f4;
+}
+
+.container {
+  max-width: 1012px;
+  width: 1012px;
+  margin: auto;
+}
+
+section {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section .insights-wrapper {
+  width: 100%;
+  padding: 4rem;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+section .profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+section .profile-img {
+  height: 110px;
+  width: 110px;
+  border-radius: 100%;
+}
+
+section .profile div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section .profile div h1 {
+  margin-left: 1rem;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #2e2e2e;
+}
+
+section .profile a {
+  background: #2e2e2e;
+  color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+}
+
+section .profile a svg {
+  margin-right: 0.5rem;
+}
+
+section nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1rem 0;
+  margin-bottom: 1rem;
+}
+
+section nav ul li a {
+  margin-right: 1.5rem;
+  font-weight: 400;
+  color: #616161;
+}
+
+section nav ul li a.current {
+  color: #2e2e2e;
+  font-weight: bold;
+}
+
+section nav ul li a:hover {
+  color: #2e2e2e;
+}
+
+section .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+section .header div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section .header div .date {
+  margin-right: 0.5rem;
+}
+
+section .stats {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+section .stats-item {
+  border: 1px solid #e6e6e6;
+  padding: 1.2rem;
+  border-radius: 10px;
+}
+
+section .stats-item.bg-dark > div:first-child h4 {
+  color: #ffffff;
+}
+
+section .stats-item.bg-dark > div:last-child .count {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+section .stats-item.bg-dark > div:last-child a {
+  color: #cccccc;
+  font-weight: 400;
+  font-size: 0.9rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section .stats-item.bg-dark > div:last-child a svg {
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+}
+
+section .stats-item.bg-dark > div:last-child a svg path {
+  fill: #ffffff;
+}
+
+section .stats-item > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+section .stats-item > div:first-child {
+  margin-bottom: 1rem;
+}
+
+section .stats-item > div:first-child h4 {
+  font-weight: 600;
+  color: #2e2e2e;
+}
+
+section .stats-item > div:first-child div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #20c792;
+  font-size: 0.85rem;
+}
+
+section .stats-item > div:first-child div svg {
+  margin-right: 0.25rem;
+}
+
+section .stats-item > div:first-child div .percentage {
+  font-weight: bold;
+}
+
+section .stats-item > div:last-child .count {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #2e2e2e;
+}
+
+section .stats-item h4 {
+  color: #ffffff;
+}
+/*# sourceMappingURL=main.css.map */
