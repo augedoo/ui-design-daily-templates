@@ -1,0 +1,240 @@
+@import url("https://fonts.googleapis.com/css2?family=Muli:wght@400;500;600;700&display=swap");
+/* Resets */
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  font-family: 'Muli', sans-serif;
+  color: #2e2e2e;
+  background: #fff;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Muli', sans-serif;
+  color: #2e2e2e;
+}
+
+h2 {
+  font-size: 1.3rem;
+}
+
+a {
+  font-family: 'Muli', sans-serif;
+  color: #2e2e2e;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+/* Utilities */
+.container {
+  max-width: 1198px;
+  margin: auto;
+}
+
+.bg-dark {
+  background: #2e2e2e;
+  color: #ffffff;
+}
+
+.page-wrapper {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Main Header */
+#main-header {
+  border-bottom: 1px solid #e1e1e1;
+}
+
+#main-header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#main-header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#main-header nav ul a {
+  margin-right: 2rem;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #616161;
+}
+
+#main-header nav ul a.current, #main-header nav ul a:hover {
+  color: #2e2e2e;
+}
+
+#main-header nav ul:last-child a {
+  margin: 0;
+  display: inline-block;
+  padding: 1.5rem 1.5rem;
+}
+
+#main-header nav ul:last-child li:last-child a {
+  color: #ffffff;
+}
+
+#path-panel .container {
+  padding: 2rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#path-panel span:not(.seperator) {
+  padding: 0.5rem 1rem;
+  background: #f4f4f4;
+  border-radius: 25px;
+  font-weight: 600;
+}
+
+#path-panel .seperator {
+  margin: 0 0.5rem;
+}
+
+main {
+  height: calc(100vh - 68px);
+  overflow-y: scroll;
+}
+
+main .container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 3fr 2fr;
+      grid-template-columns: 3fr 2fr;
+  grid-gap: 5rem;
+}
+
+main .l-content .page-title {
+  margin-bottom: 1.5rem;
+}
+
+main .l-content .pagination {
+  margin-bottom: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .l-content .pagination a {
+  padding: 0.35rem 0.5rem;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+main .l-content .pagination a.active {
+  background: #2e2e2e;
+  color: #ffffff;
+  -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+          box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+main .l-content .conferences .conference-item {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #e1e1e1;
+}
+
+main .l-content .conferences .conference-date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+main .l-content .conferences .conference-date * {
+  margin-right: 5px;
+}
+
+main .l-content .conferences .conference-date .postponed {
+  color: #e94273;
+}
+
+main .l-content .conferences .conference-location:before {
+  content: '';
+  width: 5px;
+  height: 5px;
+  display: inline-block;
+  background: #2e2e2e;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+main .r-content {
+  padding: 0 3rem;
+}
+
+main .r-content .card {
+  padding: 2rem 1.3rem;
+  border: 2px solid #ededed;
+  border-radius: 10px;
+}
+
+main .r-content .card-title {
+  margin-bottom: 0.5rem;
+  padding: 0 1.5rem;
+}
+
+main .r-content .card-item {
+  padding: 1rem 1.5rem;
+}
+
+main .r-content .card-item_active {
+  background: #2e2e2e;
+  color: #ffffff;
+  border-radius: 5px;
+}
+
+main .r-content .card-item_active .card-item-title {
+  color: #ffffff !important;
+}
+
+main .r-content .card-item-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+main .r-content .card-item-title svg {
+  margin-right: 0.5rem;
+}
+
+main .r-content .card-item-description {
+  font-weight: 400;
+}
+/*# sourceMappingURL=main.css.map */
