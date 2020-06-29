@@ -10,6 +10,7 @@ $white: #ffffff;
 * {
   padding: 0px;
   margin: 0px;
+  box-sizing: border-box;
 }
 
 body {
@@ -85,6 +86,7 @@ section {
     text-transform: uppercase;
     font-size: 1.2rem;
     font-weight: 600;
+    text-align: center;
   }
 
   & > p:nth-of-type(2) {
@@ -105,12 +107,12 @@ section {
     &:before {
       content: '';
       position: absolute;
-      height: 120%;
-      width: 105%;
+      height: 110%;
+      width: 103%;
       background: $white;
       z-index: -1;
       top: -10%;
-      left: -2.5%;
+      left: -3%;
       border-radius: 15px;
       border: 3px solid lighten($color: $primary-color, $amount: 70);
       background: transparent;
@@ -118,13 +120,19 @@ section {
       transition: 0.25s;
     }
 
-    &:hover::before {
+    &:hover,
+    &:focus {
+      outline: none;
+      border: none;
+    }
+
+    &:hover::before,
+    &:focus:before {
       transform: scale(1);
     }
   }
 
   #modal {
-    // display: none;
     position: fixed;
     background: $white;
     height: 90%;
@@ -132,7 +140,19 @@ section {
     max-width: 1058px;
     border-radius: 5px;
     overflow: hidden;
-    z-index: 3;
+    transition: 0.5s;
+    z-index: 100;
+
+    &.modal-open {
+      margin-top: 0px;
+      opacity: 1;
+      visibility: visible;
+    }
+    &.modal-close {
+      margin-top: -100px;
+      opacity: 0;
+      visibility: hidden;
+    }
 
     .content-wrapper {
       display: flex;
@@ -140,7 +160,9 @@ section {
       justify-content: center;
       padding: 4rem 4rem;
       align-items: center;
-      overflow-y: auto;
+      height: 100%;
+      width: 100%;
+      overflow: auto;
 
       &::-webkit-scrollbar {
         /* width */
@@ -201,7 +223,8 @@ section {
               display: flex;
               align-items: center;
               justify-content: center;
-              font-size: 1.5rem;
+              font-size: 2rem;
+              color: #273587;
             }
           }
 
@@ -239,6 +262,16 @@ section {
             display: none;
           }
         }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #modal {
+    .content-wrapper {
+      .list {
+        grid-template-columns: 1fr !important;
       }
     }
   }
