@@ -139,7 +139,7 @@ section {
     width: 90%;
     max-width: 1058px;
     border-radius: 5px;
-    overflow: hidden;
+    // overflow: auto;
     transition: 0.5s;
     z-index: 100;
 
@@ -270,9 +270,9 @@ section {
 @media screen and (max-width: 900px) {
   #modal {
     .content-wrapper {
-      .list {
-        grid-template-columns: 1fr !important;
-      }
+      // .list {
+      //   grid-template-columns: 1fr !important;
+      // }
     }
   }
 }

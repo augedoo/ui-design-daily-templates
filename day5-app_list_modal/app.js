@@ -14,6 +14,5 @@ function closeModal(e) {
   if (!e.target.closest('#modal')) {
     UIModal.classList.toggle('modal-close');
   }
-
   e.preventDefault();
 }
