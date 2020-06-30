@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Muli:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Muli:wght@400;500;600;700,800&display=swap");
 * {
   padding: 0px;
   margin: 0px;
@@ -142,6 +142,7 @@ img {
   display: grid;
   -ms-grid-columns: 300px 1fr;
       grid-template-columns: 300px 1fr;
+  grid-gap: 1.5rem;
   height: 100%;
 }
 
@@ -150,9 +151,39 @@ img {
 }
 
 #projects-main .content-l aside {
+  height: calc(90vh - 2rem);
+  padding: 1rem;
   border-radius: 25px;
-  padding: 2rem;
+}
+
+#projects-main .content-l aside .aside-wrapper {
+  padding: 1rem;
   height: 100%;
+  width: 100%;
+  overflow-y: scroll;
+}
+
+#projects-main .content-l aside .aside-wrapper::-webkit-scrollbar {
+  /* width */
+  background: transparent;
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+
+#projects-main .content-l aside .aside-wrapper::-webkit-scrollbar-track {
+  background: transparent;
+  width: 3px;
+}
+
+#projects-main .content-l aside .aside-wrapper::-webkit-scrollbar-thumb {
+  background: #4f516c;
+  border-radius: 10px;
+  border: 4px solid #242531;
+}
+
+#projects-main .content-l aside .aside-wrapper::-webkit-scrollbar-thumb:hover {
+  background: #bcc7e8;
 }
 
 #projects-main .content-l aside h3 {
@@ -160,6 +191,12 @@ img {
   font-size: 0.9rem;
   color: #b3b3b3;
   margin-bottom: 1rem;
+  letter-spacing: 1.2px;
+}
+
+#projects-main .content-l aside ul {
+  min-height: 50%;
+  padding-bottom: 2rem;
 }
 
 #projects-main .content-l aside ul li a {
@@ -208,5 +245,189 @@ img {
   font-size: 0.8rem;
   color: #58aeff;
   margin-left: 0.5rem;
+}
+
+#projects-main .content-l aside .card {
+  margin-top: 1.5rem;
+  background: #44465d;
+  padding: 1rem;
+  border-radius: 15px;
+}
+
+#projects-main .content-l aside .card-title {
+  padding-bottom: 1rem;
+}
+
+#projects-main .content-l aside .card-body p {
+  margin-bottom: 1rem;
+  color: #f4f4f4;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+#projects-main .content-l aside .card a {
+  width: 100%;
+  font-weight: 700;
+  display: inline-block;
+  padding: 1rem 2rem;
+  text-align: center;
+  background: #f4f4f4;
+  border-radius: 15px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#projects-main .content-l aside .card a:hover {
+  background: #cecece;
+}
+
+#projects-main .content-r {
+  height: 90vh;
+  width: 100%;
+  padding-bottom: 2rem;
+}
+
+#projects-main .content-r .page-title {
+  height: 5%;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border-bottom: 1px solid #f4f4f4;
+}
+
+#projects-main .content-r .projects {
+  height: 90%;
+  min-height: 90%;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+#projects-main .content-r .projects::-webkit-scrollbar {
+  /* width */
+  background: transparent;
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+
+#projects-main .content-r .projects::-webkit-scrollbar-track {
+  background: transparent;
+  width: 3px;
+}
+
+#projects-main .content-r .projects::-webkit-scrollbar-thumb {
+  background: #cecece;
+  border-radius: 10px;
+  border: 4px solid #f4f4f4;
+}
+
+#projects-main .content-r .projects::-webkit-scrollbar-thumb:hover {
+  background: #c1c1c1;
+}
+
+#projects-main .content-r .projects .project-items {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (100px)[auto-fit];
+      grid-template-columns: repeat(auto-fit, 100px);
+  grid-gap: 2rem 2.5rem;
+}
+
+#projects-main .content-r .projects .project-item .card {
+  height: 110px;
+  width: 110px;
+  border-radius: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 0.5rem;
+  padding: 1rem;
+  background: #20c792;
+}
+
+#projects-main .content-r .projects .project-item .initials {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+#projects-main .content-r .projects .project-item .name {
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.8rem;
+  color: #242531;
+}
+
+#projects-main .content-r .projects .add-project-btn a {
+  height: 110px;
+  width: 110px;
+  border-radius: 25px;
+  border: 1px solid #c9cad7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#projects-main .content-r .projects .add-project-btn a svg {
+  fill: #717497;
+}
+
+#projects-main .content-r .projects .panel {
+  padding: 1rem 0;
+}
+
+#projects-main .content-r .footer {
+  height: 5%;
+  width: 100%;
+  border-top: 1px solid #f4f4f4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+#projects-main .content-r .footer ul {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#projects-main .content-r .footer ul li {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#projects-main .content-r .footer ul a {
+  margin-right: 1rem;
+  color: #242531;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 /*# sourceMappingURL=main.css.map */
