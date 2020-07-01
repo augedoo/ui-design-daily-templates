@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Muli:wght@400;500;600;700,800&display=swap');
 
+:root {
+  --primary: #7a90fd;
+  --primary-light: #c4cae3;
+  --primary-dark: #2e2a64;
+}
+
 * {
   padding: 0px;
   margin: 0px;
@@ -9,25 +15,20 @@
 
 body {
   font-family: 'Muli', sans-serif;
-  color: #2e2a64;
+  color: var(--primary-dark);
   background: #fff;
 }
 
 h1,
-h2,
-h3,
-h4 {
+h2 {
   font-family: 'Muli', sans-serif;
   font-weight: bold;
-}
-
-h2 {
-  font-size: 1.3rem;
+  font-size: 1rem;
 }
 
 a {
   font-family: 'Muli', sans-serif;
-  color: #2e2a64;
+  color: var(--primary-dark);
   text-decoration: none;
 }
 
@@ -48,4 +49,112 @@ section {
   width: 100%;
   height: 100%;
   margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary);
+}
+
+.card {
+  width: 800px;
+  background: #eceff8;
+  padding: 3rem 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px rgba(61, 53, 138, 0.086),
+    -6px -6px 10px rgba(61, 53, 138, 0.056), 6px 6px 10px rgba(61, 53, 138, 0.2);
+}
+
+.card .steps {
+  width: 60%;
+  margin-bottom: 3rem;
+}
+
+.card .steps ul {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  position: relative;
+}
+
+.card .steps ul::before {
+  content: '';
+  background: var(--primary-light);
+  z-index: 1;
+  height: 3px;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.card .steps ul li {
+  height: 30px;
+  width: 30px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  background: white;
+  color: var(--primary-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.card .steps ul li.active {
+  background: var(--primary);
+  color: white;
+}
+
+.content {
+  display: flex;
+  flex-basis: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.card .step-content {
+  display: none;
+}
+
+.card .step-content h1 {
+  padding: 1rem 0;
+}
+
+.card .step-content p {
+  font-weight: 400;
+  font-size: 0.9rem;
+  max-width: 80%;
+  margin: auto;
+  line-height: 1.6;
+  padding-bottom: 3rem;
+}
+
+.card #next-button,
+.card #prev-button {
+  padding: 1rem 2rem;
+  border: none;
+  background: var(--primary);
+  border-radius: 5px;
+  font-weight: 600;
+  color: white;
+  font-size: 0.9rem;
+  transition: 0.5s;
+}
+
+.card #next-button:hover,
+.card #next-button:focus,
+.card #prev-button:hover,
+.card #prev-button:focus {
+  outline: none;
+  border: none;
+}
+
+.card #next-button:hover {
+  background: #6981fd;
 }
