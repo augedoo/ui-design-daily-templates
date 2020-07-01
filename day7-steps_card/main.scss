@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli:wght@400;500;600;700,800&display=swap');
+
+$primary-color: #7a90fd;
+$page-width: 1297px;
+$dark: #2e2a64;
+$light: #f4f4f4;
+$white: #ffffff;
+
+//------------------------------
+// Resets
+//------------------------------
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Muli', sans-serif;
+  color: $dark;
+  background: #fff;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Muli', sans-serif;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.3rem;
+}
+
+a {
+  font-family: 'Muli', sans-serif;
+  color: $dark;
+  text-decoration: none;
+}

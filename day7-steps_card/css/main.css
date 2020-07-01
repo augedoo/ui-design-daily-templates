@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Muli:wght@400;500;600;700,800&display=swap");
+* {
+  padding: 0px;
+  margin: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Muli', sans-serif;
+  color: #2e2a64;
+  background: #fff;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Muli', sans-serif;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.3rem;
+}
+
+a {
+  font-family: 'Muli', sans-serif;
+  color: #2e2a64;
+  text-decoration: none;
+}
+/*# sourceMappingURL=main.css.map */
