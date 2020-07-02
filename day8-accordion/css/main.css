@@ -101,6 +101,10 @@ ul {
   border-bottom: solid 1px #dae1f5;
 }
 
+.card .accordion-item:last-child {
+  border-bottom: none;
+}
+
 .card .accordion-item-head {
   height: 60px;
   display: -webkit-box;
@@ -139,10 +143,6 @@ ul {
   color: var(--dark-light);
 }
 
-.card .accordion-item-head .icon i.active {
-  display: inline;
-}
-
 .card .accordion-item-title {
   font-size: 1.1rem;
   font-weight: 500;
@@ -150,6 +150,7 @@ ul {
 
 .card .accordion-item-body {
   padding-bottom: 3rem;
+  overflow: hidden;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
@@ -181,12 +182,6 @@ ul {
 .card .accordion-item.collapse .accordion-item-body {
   padding: 0;
   max-height: 0px;
-  overflow: hidden;
-}
-
-.card .accordion-item.collapse .accordion-item-body * {
-  opacity: 0;
-  font-size: 0px;
 }
 
 .card .accordion-item.expand .accordion-item-head .icon .fa-minus {
@@ -197,15 +192,9 @@ ul {
 
 .card .accordion-item.expand .accordion-item-head .icon .fa-plus {
   display: none;
-  opacity: 0;
 }
 
 .card .accordion-item.expand .accordion-item-body {
   max-height: 200px;
-  overflow: visible;
-}
-
-.card .accordion-item.expand .accordion-item-body * {
-  opacity: 1;
 }
 /*# sourceMappingURL=main.css.map */
