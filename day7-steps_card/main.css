@@ -72,6 +72,17 @@ section {
 .card .steps {
   width: 60%;
   margin-bottom: 3rem;
+  position: relative;
+}
+
+.card .steps .progress {
+  background: var(--primary);
+  z-index: 2;
+  height: 3px;
+  width: 70%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .card .steps ul {

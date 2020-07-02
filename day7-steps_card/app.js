@@ -3,6 +3,7 @@ const nextBtn = document.getElementById('next-button');
 const prevBtn = document.getElementById('prev-button');
 const steps = document.querySelectorAll('.steps li');
 const stepContents = document.querySelectorAll('.step-content');
+const progressbar = document.querySelector('.steps .progress');
 let CURRENT_STEP = 1;
 
 // Events
@@ -14,8 +15,9 @@ document.addEventListener('DOMContentLoaded', loadStep);
 // Load initial step
 function loadStep() {
   toggleButtons(CURRENT_STEP);
-  updateStepIndicator(CURRENT_STEP);
   getCurrentStepContent(CURRENT_STEP);
+  updateStepIndicator(CURRENT_STEP);
+  updateProgress(CURRENT_STEP);
 }
 
 // Go to the next step
@@ -29,6 +31,7 @@ function nextStep() {
     toggleButtons(CURRENT_STEP);
     getCurrentStepContent(CURRENT_STEP);
     updateStepIndicator(CURRENT_STEP);
+    updateProgress(CURRENT_STEP);
   }
 }
 
@@ -39,6 +42,7 @@ function prevStep() {
   toggleButtons(CURRENT_STEP);
   getCurrentStepContent(CURRENT_STEP);
   updateStepIndicator(CURRENT_STEP);
+  updateProgress(CURRENT_STEP);
 }
 
 // When steps is completed
@@ -90,6 +94,12 @@ const updateStepIndicator = (currentStep) => {
     // > Make step active
     if (stepNumber === currentStep) step.classList.add('active');
   });
+};
+
+const updateProgress = (stepNumber) => {
+  const totalSteps = steps.length;
+  let progress = ((stepNumber / totalSteps) * 100).toFixed(2);
+  progressbar.style.width = progress + '%';
 };
 
 const toggleButtons = (currentStep) => {
