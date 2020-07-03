@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap');
+
+$light: #f4f4f4;
+$white: #ffffff;
+$primary: #e2e7fa;
+$primary-light: #eef1fc;
+$primary-dark: #597fe2;
+$accent-color: #e94273;
+$white: #ffffff;
+$medium: #6d7593;
+$page-bg: #eef1fc;
+$black: #000000;
+$dark: #13274f;
+$dark-light: #848892;
+
+/* Resets */
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  font-family: 'Muli', sans-serif;
+  color: $dark;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Muli', sans-serif;
+  color: $black;
+}
+
+h2 {
+  font-size: 1.3rem;
+}
+
+a {
+  font-family: 'Muli', sans-serif;
+  color: $dark;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+/* Utilities */
+.container {
+  max-width: 1198px;
+  margin: auto;
+}
+
+.bg-dark {
+  background: $dark;
+  color: $white;
+}
+
+.page-wrapper {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background: $page-bg;
+}
