@@ -104,20 +104,45 @@ header {
       nav ul {
         display: flex;
 
-        a {
+        li {
           margin-left: 2rem;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+
+          &::after {
+            content: '';
+            height: 4px;
+            width: 50%;
+            border-radius: 25px;
+            margin-top: 7px;
+          }
+        }
+
+        li {
+          &.current {
+            a {
+              color: $dark;
+            }
+
+            &::after {
+              background: $primary-dark;
+            }
+          }
+
+          &:hover {
+            a {
+              color: $dark;
+            }
+          }
+        }
+
+        a {
           font-weight: 600;
           font-size: 0.9rem;
           text-transform: capitalize;
           color: $medium;
-
-          &.current {
-            color: $dark;
-          }
-
-          &:hover {
-            color: $dark;
-          }
         }
       }
     }
@@ -145,11 +170,10 @@ header {
     }
 
     .platform {
-      width: 90%;
       margin: auto;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      grid-gap: 3rem;
+      grid-gap: 4rem;
 
       &-item {
         background: $white;
@@ -175,17 +199,28 @@ header {
         }
 
         a {
-          font-size: 0.9rem;
+          font-size: 0.8rem;
           font-weight: 600;
           padding: 0.75rem 0.85rem;
           border: 3px solid $primary;
           margin-bottom: 1rem;
           color: darken($color: $medium, $amount: 7);
+          border-radius: 5px;
         }
 
         .requirement {
           font-size: 0.8rem;
           color: $medium;
+        }
+      }
+
+      &-item_windows {
+        transform: scale(1.1);
+
+        a {
+          background: $primary-dark;
+          color: $light;
+          border-color: $primary-dark;
         }
       }
     }

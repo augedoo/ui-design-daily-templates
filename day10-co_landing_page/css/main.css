@@ -98,20 +98,48 @@ header {
   display: flex;
 }
 
-#home-main-header .container nav ul a {
+#home-main-header .container nav ul li {
   margin-left: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#home-main-header .container nav ul li::after {
+  content: '';
+  height: 4px;
+  width: 50%;
+  border-radius: 25px;
+  margin-top: 7px;
+}
+
+#home-main-header .container nav ul li.current a {
+  color: #13274f;
+}
+
+#home-main-header .container nav ul li.current::after {
+  background: #597fe2;
+}
+
+#home-main-header .container nav ul li:hover a {
+  color: #13274f;
+}
+
+#home-main-header .container nav ul a {
   font-weight: 600;
   font-size: 0.9rem;
   text-transform: capitalize;
   color: #6d7593;
-}
-
-#home-main-header .container nav ul a.current {
-  color: #13274f;
-}
-
-#home-main-header .container nav ul a:hover {
-  color: #13274f;
 }
 
 #home-showcase {
@@ -137,13 +165,12 @@ header {
 }
 
 #home-showcase .platform {
-  width: 90%;
   margin: auto;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
-  grid-gap: 3rem;
+  grid-gap: 4rem;
 }
 
 #home-showcase .platform-item {
@@ -186,17 +213,29 @@ header {
 }
 
 #home-showcase .platform-item a {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: 600;
   padding: 0.75rem 0.85rem;
   border: 3px solid #e2e7fa;
   margin-bottom: 1rem;
   color: #5e657f;
+  border-radius: 5px;
 }
 
 #home-showcase .platform-item .requirement {
   font-size: 0.8rem;
   color: #6d7593;
+}
+
+#home-showcase .platform-item_windows {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+#home-showcase .platform-item_windows a {
+  background: #597fe2;
+  color: #f4f4f4;
+  border-color: #597fe2;
 }
 
 footer {
