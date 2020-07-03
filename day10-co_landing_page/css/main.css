@@ -3,10 +3,12 @@
 * {
   padding: 0px;
   margin: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
-  font-family: 'Muli', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   color: #13274f;
 }
 
@@ -14,16 +16,12 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: 'Muli', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   color: #000000;
 }
 
-h2 {
-  font-size: 1.3rem;
-}
-
 a {
-  font-family: 'Muli', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   color: #13274f;
   text-decoration: none;
 }
@@ -38,7 +36,7 @@ img {
 
 /* Utilities */
 .container {
-  max-width: 1198px;
+  max-width: 1400px;
   margin: auto;
 }
 
@@ -48,9 +46,198 @@ img {
 }
 
 .page-wrapper {
-  height: 100vh;
   width: 100%;
-  overflow: hidden;
   background: #eef1fc;
+}
+
+.page-wrapper img {
+  position: absolute;
+  z-index: 1;
+}
+
+.page-wrapper img.back-bg {
+  height: 160px;
+  width: 100%;
+}
+
+.page-wrapper img.front-bg {
+  height: 140px;
+  right: 0;
+  width: 90%;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+
+#home-main-header .container {
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#home-main-header .container .branding {
+  font-weight: 900;
+  font-size: 2rem;
+}
+
+#home-main-header .container nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#home-main-header .container nav ul a {
+  margin-left: 2rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: capitalize;
+  color: #6d7593;
+}
+
+#home-main-header .container nav ul a.current {
+  color: #13274f;
+}
+
+#home-main-header .container nav ul a:hover {
+  color: #13274f;
+}
+
+#home-showcase {
+  width: 100%;
+}
+
+#home-showcase .container {
+  padding: 200px 5rem 5rem 5rem;
+  text-align: center;
+}
+
+#home-showcase .tag-line {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+#home-showcase .lead {
+  width: 60%;
+  margin: auto;
+  line-height: 1.5;
+  font-size: 1.2rem;
+  margin-bottom: 4rem;
+}
+
+#home-showcase .platform {
+  width: 90%;
+  margin: auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-gap: 3rem;
+}
+
+#home-showcase .platform-item {
+  background: #ffffff;
+  border-radius: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 3rem 4rem;
+}
+
+#home-showcase .platform-item > div {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#home-showcase .platform-item > div img {
+  width: 80px;
+  height: 80px;
+}
+
+#home-showcase .platform-item a {
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.75rem 0.85rem;
+  border: 3px solid #e2e7fa;
+  margin-bottom: 1rem;
+  color: #5e657f;
+}
+
+#home-showcase .platform-item .requirement {
+  font-size: 0.8rem;
+  color: #6d7593;
+}
+
+footer {
+  background: #e2e7fa;
+  padding: 0 10rem;
+}
+
+footer .items {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+}
+
+footer .items .item {
+  padding: 4rem;
+}
+
+footer .items .item h3 {
+  font-size: 0.9rem;
+  color: #13274f;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+footer .items .item p {
+  color: #000000;
+  font-size: 0.9rem;
+}
+
+footer .items .copyright {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1/4;
+  text-align: center;
+  padding: 0rem;
+}
+
+footer .items .copyright p {
+  font-size: 0.85rem;
+  padding: 1rem 0 2rem;
+  color: #6d7593;
 }
 /*# sourceMappingURL=main.css.map */
